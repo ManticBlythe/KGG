@@ -1,4 +1,8 @@
 /* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,6 +44,22 @@ a {
   font-weight: bold;
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
 .nav {
   display: flex;
   gap: 1.5rem;
@@ -72,6 +92,35 @@ a {
 
 .btn-secondary:hover {
   background: #eef2ff;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
 }
 
 /* Hero section */
@@ -170,14 +219,11 @@ a {
   width: 100%;
   max-width: 400px;
   padding: 0.5rem;
- 
   border-radius: 0.375rem;
-  
   display: block;
   margin: 0.5rem auto;
   text-align: left;
 }
-
 
 #contact textarea {
   resize: vertical;
@@ -226,15 +272,12 @@ a {
 }
 
 #contact label {
-    text-align: center;
+  text-align: center;
 }
 
-ul
-{
-list-style-type: none;
+ul {
+  list-style-type: none;
 }
-
-
 
 .panel-wrapper {
   display: grid;
