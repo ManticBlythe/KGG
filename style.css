@@ -1,4 +1,13 @@
 /* Base styles */
+@media (max-width: 768px) {
+  .footer .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -337,4 +346,23 @@ ul {
 
 .panel .soicals a:hover {
   color: #4f46e5;
+}
+
+
+.footer .nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.footer .nav a {
+  color: #d1d5db;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer .nav a:hover {
+  color: #ffffff;
 }
